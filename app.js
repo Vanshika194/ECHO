@@ -12,23 +12,21 @@ function speak(text) {
 }
 
 function wishMe() {
-    var day = new Date();
-    var hour = day.getHours();
+    const day = new Date();
+    const hour = day.getHours();
 
     if (hour >= 0 && hour < 12) {
-        speak("Good Morning Boss...");
+        speak("Good Morning Boss... Click on icon to speak");
     } else if (hour >= 12 && hour < 17) {
-        speak("Good Afternoon Master...");
+        speak("Good Afternoon Master...Click on icon to speak");
     } else {
-        speak("Good Evening Sir...");
+        speak("Good Evening Sir...Click on icon to speak");
     }
 }
-
 window.addEventListener('load', () => {
-    speak("Initializing ECHO...");
-    wishMe();
+        speak("Initializing ECHO...");
+        wishMe();
 });
-
 const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
 const recognition = new SpeechRecognition();
 
